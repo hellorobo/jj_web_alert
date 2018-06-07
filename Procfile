@@ -1,1 +1,1 @@
-jjwebalert: python app.py
+jjwebalert: python spider.py
