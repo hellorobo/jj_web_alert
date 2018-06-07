@@ -77,8 +77,8 @@ if isPageLoaded:
     table = soup.find('div', class_='wrtext')
     rows = table.findAll('tr', class_='strong')
     for r in rows:
-	tdata = r.findAll('td')
-	if tdata[4].text != wantedString:
+        tdata = r.findAll('td')
+        if tdata[4].text != wantedString:
             message = 'found'
 else:
     message = 'Couldn\'t retrieve page contents'
