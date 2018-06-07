@@ -15,6 +15,7 @@ def sendSms(smsServer,smsToken,smsFrom,smsTo,smsMessage):
 
 url = 'https://ul.uni.lodz.pl/course.php?rg=1300-C1819-W&group=13R18191DAZJ3WB&subject=1300-D1WBO12&cdyd=Z-18%2F19&full=1'
 siteName = 'USOS - rejestracja zetonowa: Jezyk arabski (Z-18/19)'
+wantedString = os.environ['SEARCH_STRING']
 
 #agent = {'User-Agent': 'Google Spider'}
 #resp = requests.get(url, headers=agent)
@@ -77,7 +78,7 @@ if isPageLoaded:
     rows = table.findAll('tr', class_='strong')
     for r in rows:
 	tdata = r.findAll('td')
-	if tdata[4].text != '0/0':
+	if tdata[4].text != wantedString:
             message = 'found'
 else:
     message = 'Couldn\'t retrieve page contents'
