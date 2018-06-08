@@ -90,7 +90,7 @@ if message:
     smsToken = os.environ['SMS_TOKEN']
     smsFrom = os.environ['SMS_FROM']
     smsTo = os.environ['SMS_TO']
-    smsMessage = f'ALARM from {siteName}, check details on {url}'
+    smsMessage = f'ALARM from {siteName}, check details on https://ul.uni.lodz.pl/index.php'
 
     result = sendSms(smsServer1,smsToken,smsFrom,smsTo,smsMessage)
     if result.status_code != 200:
