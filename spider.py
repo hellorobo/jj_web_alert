@@ -96,3 +96,5 @@ if message:
     if result.status_code != 200:
         result = sendSms(smsServer2,smsToken,smsFrom,smsTo,smsMessage)
     print(f'SmsAPI:{result.text}')
+else:
+    print (f'web page criteria: [{wantedString}], haven\'t been met')
